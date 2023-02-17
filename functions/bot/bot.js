@@ -44,3 +44,12 @@ bot.onText(/\/start/, async (msg) => {
     bot.sendMessage(msg.chat.id, "At the end of 1d candle I will start screening. Patience....")
     await screen(chatId)
 });
+exports.handler = async event => {
+    try {
+        await bot.handleUpdate(JSON.parse(event.body))
+        return { statusCode: 200, body: "" }
+    } catch (e) {
+        console.error("error in handler:", e)
+        return { statusCode: 400, body: "This endpoint is meant for bot and telegram communication" }
+    }
+}
