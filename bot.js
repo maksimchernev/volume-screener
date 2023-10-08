@@ -34,13 +34,15 @@ const screen = async (chatId) => {
         }
         let averageVolume = sum / 14;
         const diff = responseOHLCV[responseOHLCV.length - 1][5] / averageVolume;
-        diff > 3 &&
+        console.log("working", new Date());
+        if (diff > 3) {
           bot.sendMessage(
             chatId,
             `${ticker} ${Math.floor(diff)} times increase in volume`
           );
+        }
 
-        await wait(1000);
+        await wait(3000);
       }
     }
     await sync();

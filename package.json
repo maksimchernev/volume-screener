@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bot.js"
   },
   "keywords": [
     "o"
@@ -14,7 +15,7 @@
   "dependencies": {
     "ccxt": "^2.7.94",
     "dotenv": "^16.0.3",
-    "netlify-lambda": "^2.0.16",
-    "node-telegram-bot-api": "^0.61.0"
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^3.0.1"
   }
 }
