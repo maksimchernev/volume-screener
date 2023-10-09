@@ -16,6 +16,9 @@
     "ccxt": "^2.7.94",
     "dotenv": "^16.0.3",
     "node-telegram-bot-api": "^0.61.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "tslib": "^2.6.2",
+    "zip-a-folder": "^3.1.3"
   }
 }
