@@ -9,7 +9,8 @@ const { zip } = require("zip-a-folder");
 const path = require("path");
 
 const binance = new ccxt.binance();
-const wait = (ms = 10) => new Promise((resolve) => setTimeout(resolve, ms));
+const wait = (ms = process.env.WAIT_MS) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 const sync = async (chatId) => {
   try {
